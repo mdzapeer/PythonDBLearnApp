@@ -47,5 +47,5 @@ def updateRow(id,title,author,year,isbn):
 createTable()
 #insertRow("The Earth","John Smith", 1912, 912354683)
 #deleteRow(6)
-print(viewDB())
-print(searchDB(author="John Smith"))
+#print(viewDB())
+#print(searchDB(author="John Smith"))

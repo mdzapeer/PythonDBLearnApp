@@ -1,4 +1,10 @@
 from tkinter import *
+import backend
+
+def view_command():
+    list1.delete(0,END)
+    for row in backend.viewDB():
+        list1.insert(END,row)
 
 window=Tk()
 
@@ -31,7 +37,7 @@ e4=Entry(window,textvariable=ISBN_text)
 e4.grid(row=1, column=3)
 
 list1=Listbox(window,height=6,width=35)
-list1.grid(row=2,column=0,rowspan=6,columnspan=2)
+list1.grid(row=2,column=0,rowspan=6,columnspan=2,command=view_command)
 
 sb1=Scrollbar(window)
 sb1.grid(row=2,column=2,rowspan=6)
