@@ -1,5 +1,5 @@
 class Account:
-
+"""This is a class for an Account"""
     def __init__(self,filepath):
         self.filepath=filepath
         with open(filepath, 'r') as file:
@@ -16,7 +16,7 @@ class Account:
             file.write(str(self.balance))
 
 class Checking(Account)
-
+"""This is a inherhited class object from Account, for creating checking account class"""
     def __init__(self,Account,filepath,fee):
         Account.__init__(self,filepath)
         self.fee=fee
@@ -24,7 +24,7 @@ class Checking(Account)
     def transfer(self,amount):
         self.balance=self.balance-amount-fee
 
-        
+
 
 
 
